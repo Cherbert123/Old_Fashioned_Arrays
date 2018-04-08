@@ -98,10 +98,14 @@ public class ArrayManipulation {
 		String[] orderedArray = { "concerned", "affected", "fascinated",
 				"intrigued", "absorbed", "inquisitive", "nosy", "snoopy",
 				"engrossed", "curious" };
+		
 		Sorting.sort(orderedArray);
 		
 		String[] outputArray =
 			Inserting.insertAlphabetically(orderedArray, "groovy");
+		for (int i = 0; i < outputArray.length; i++) {
+			System.out.println(outputArray[i]);
+		}
 		assertArrayEquals(
 			new String[] {
 				"absorbed",

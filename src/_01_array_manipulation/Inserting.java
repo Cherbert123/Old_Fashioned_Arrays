@@ -18,16 +18,11 @@ public class Inserting {
 
 	public static String[] insertAlphabetically(String[] orderedArray, String string) {
 		String[] aRay = new String[orderedArray.length + 1];
-		int l = 0;
-			for (int i = 0; i < orderedArray.length + 1; i++) {
-				l++;
-				if (string.compareTo(orderedArray[l]) < 0){
-					aRay[i] = string;
-					l = l - 1;
-				}	else {
-					aRay[i] = orderedArray[l];
-				}
-			}
+		for (int i = 0; i < orderedArray.length; i++) {
+			aRay[i] = orderedArray[i];
+		}
+		aRay[aRay.length - 1] = string;
+		Sorting.sort(aRay);
 		return aRay;
 	}
 	
