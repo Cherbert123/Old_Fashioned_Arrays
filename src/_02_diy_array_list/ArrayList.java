@@ -45,6 +45,34 @@ public class ArrayList<T>{
 		
 	}
 
+	public void remove(int i) {
+			for (int j = 0; j < ta.length; j++) {
+			System.out.println(ta[j]);
+		}
+		T[] aRay = (T[]) new Object[ta.length - 1];
+		for (int j = 0; j < i; j++) {
+			aRay[j] = ta[j];
+		}
+		for (int j2 = 0; j2 < ta.length - i - 1; j2++) {
+			aRay[j2 + i] = ta[j2 + i];
+
+		}
+		ta = (T[]) new Object[ta.length - 1];
+		ta = aRay;
+		
+
+	}
+
+	public boolean contains(String string) {
+		boolean val = false;
+		for (int i = 0; i < ta.length; i++) {
+			if (ta[i].toString().equals(string)) {
+				val = true;
+			}
+		}
+		return val;
+	}
+
 	
 
 }
