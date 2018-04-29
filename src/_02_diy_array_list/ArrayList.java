@@ -46,18 +46,15 @@ public class ArrayList<T>{
 	}
 
 	public void remove(int i) {
-			for (int j = 0; j < ta.length; j++) {
-			System.out.println(ta[j]);
-		}
+		
 		T[] aRay = (T[]) new Object[ta.length - 1];
 		for (int j = 0; j < i; j++) {
 			aRay[j] = ta[j];
 		}
-		for (int j2 = 0; j2 < ta.length - i - 1; j2++) {
-			aRay[j2 + i] = ta[j2 + i];
-
+		int ctr = i;
+		for (int j2 = i + 1; j2 < ta.length; j2++) {
+			aRay[ctr++] = ta[j2];
 		}
-		ta = (T[]) new Object[ta.length - 1];
 		ta = aRay;
 		
 
